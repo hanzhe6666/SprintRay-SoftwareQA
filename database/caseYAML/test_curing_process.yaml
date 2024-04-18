@@ -1,7 +1,0 @@
-- model: TestCuringProcess
-
-- casename: test_search_material
-  title: Test search material
-  precond:
-  testdata:
-    - material: SprintRay Castable 2
