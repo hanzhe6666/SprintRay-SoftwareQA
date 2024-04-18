@@ -1,0 +1,8 @@
+- model: TestNanoCureSignIn
+
+- casename: test_sign_in_nonocure
+  title: Test login forward process
+  precond:
+  testdata:
+    - email: wangyili@soonsolid.com
+      password: 12345678Dev

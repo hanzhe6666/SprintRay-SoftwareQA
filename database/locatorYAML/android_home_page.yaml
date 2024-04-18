@@ -1,0 +1,134 @@
+#定位模板
+#- casename: # 测试用例
+#  title: #用例标题
+#  precond: #前置
+#  testdata:
+#    - loginname: "admin"
+#      password: "fdr**2020"
+#      assertion: "管理员"
+#    - loginname: "18268"
+#      password: "123456a?"
+#      assertion: "18268"
+#  element:
+#    - casesteid:  # 步骤id
+#      types:   # 定位类型
+#      operate:    # 操作类型
+#      locate: # 定位器
+#      info:    # 步骤说明
+#      expect:        # 步骤预期
+
+- model: HomePage  # 对应当前文件的 类名称
+
+- casename: goto_home
+  title: 点击首页按钮进入首页
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivHome
+      info: Click the home button to enter the home page
+      expect:
+
+- casename: goto_sprintray_material
+  title: 点击SprintRay进入Sprintray材料列表页面
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivSprintRayLogo
+      info: Click the SprintRay button to enter the Sprintray material list page
+      expect:
+
+- casename: select_castable2_material
+  title: 选择SprintRay Castable 2材料
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[1]/android.widget.TextView
+      info: Select the SprintRay Castable 2 material
+      expect:
+
+- casename: select_search_castable2_material
+  title: 选择搜索的SprintRay Castable 2材料
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/item_view_select_text
+      info: Select the SprintRay Castable 2 material to search for
+      expect:
+
+- casename: search_material
+  title: 点击搜索图标进行搜索，并且输入材料名字
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivSearch
+      info: Click on the search icon to search
+      expect:
+    - casesteid: 2
+      types: id
+      operate: input
+      locate: com.soonsolid.curemini:id/etSearch
+      info: Enter material
+      expect:
+
+- casename: get_tryagain_text
+  title: 获取Try Again文本
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: text
+      locate: com.soonsolid.curemini:id/tvTryAgain
+      info: Get the Try Again text
+      expect:
+
+- casename: goto_custom
+  title: 进入自定义固化页面
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/tvCustomCure
+      info: The Customize Curing page is displayed
+      expect:
+
+- casename: add_ten_sec
+  title: 自定义固化页面固化时间加十秒
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivTenSecAdd
+      info: Customize curing page curing time plus 10 seconds
+      expect:
+
+- casename: start_curing
+  title: 点击start按钮开始固化
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/tvStart
+      info: Click the start button to start curing
+      expect:

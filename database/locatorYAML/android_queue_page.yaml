@@ -1,0 +1,37 @@
+- model: QueuePage  # 对应当前文件的 类名称
+
+- casename: goto_queue
+  title: 点击队列，进入队列页面
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivCloud
+      info: Click the queue button to enter the queue page
+      expect:
+
+- casename: click_first_task
+  title: 点击固化列表第一个任务
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: xpath
+      operate: click
+      locate: /hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup/android.widget.LinearLayout/android.widget.TextView[1]
+      info: Click on the first task in the cure list
+      expect:
+
+- casename: click_start
+  title: 点击开始按钮开始固化
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/tvStart
+      info: Click the Start button to start curing
+      expect:

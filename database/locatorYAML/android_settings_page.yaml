@@ -1,0 +1,13 @@
+- model: SettingsPage  # 对应当前文件的 类名称
+
+- casename: goto_settings
+  title: 点击设置，进入设置页面
+  precond:
+  testdata:
+  element:
+    - casesteid: 1
+      types: id
+      operate: click
+      locate: com.soonsolid.curemini:id/ivSetting
+      info: Click the Settings button to enter the Settings page
+      expect:

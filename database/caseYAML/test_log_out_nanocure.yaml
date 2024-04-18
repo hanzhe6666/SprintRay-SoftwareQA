@@ -1,0 +1,8 @@
+- model: TestNanoCureLogOut
+
+- casename: test_log_out_nonocure
+  title: Test logout forward process
+  precond:
+  testdata:
+    - email: wangyili@soonsolid.com
+      password: 12345678Dev
